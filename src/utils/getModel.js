@@ -1,6 +1,8 @@
+const path = require('path')
+
 const getModel = (modelname) => {
     try{
-        return require(`../models/${modelname}`)
+        return require(path.resolve(__dirname, '../../../../models', modelname)); 
     }
     catch(err){
         console.log(err)
