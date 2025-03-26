@@ -11,7 +11,7 @@ const uniqueIdentifier = (identifierFeild, modelname) => {
     
             const requestData = req.body
     
-            if(requestData[identifierFeild]){
+            if(!requestData[identifierFeild]){
                 return res.json({ Error: `Missing ${identifierFeild} on Request Data (request body)` })
             }
     
