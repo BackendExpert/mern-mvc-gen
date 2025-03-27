@@ -22,7 +22,34 @@ const signup = (modelname) => {
                 }
             }
 
+            const missingFeilds = requiredFeilds.filter(feild => !req.body[feild]);
+
+            if(missingFeilds.length > 0){
+                return res.json({ Error: `Following Feilds are Missing ${missingFeilds.join(", ")}`})
+            }
+
+
+            const checkunique = await Model.findOne({
+                $or: uniqueFeilds.map(feild => ({ [feild]: req.body[feild] }))
+            })
+
+            if(checkunique){
+                return res.json({ Error: `User Already Exists in ${uniqueFeilds.join(", ")}`})
+            }
             
+            if(req.body.password){
+                req.body.password = await bcrypt.hash(req.body.password, 10)
+            }
+
+            const newsUser = new Model(req.body)
+            const resultnewuser = await newsUser.save();
+
+            if(resultnewuser){
+                return res.json({ Status: 'Success'})
+            }
+            else{
+                return res.json({ Error: "Internal Server Error while creating New User"})
+            }
         }
         catch(err){
             console.log(err)
