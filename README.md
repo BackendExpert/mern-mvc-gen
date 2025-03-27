@@ -69,6 +69,12 @@ npm install merngen
 
 - Contributions are welcome! Please feel free to open issues or submit pull requests to improve this package.
 
+## ScreenShorts
+
+1. Normal SignUp
+
+<img src=''>
+
 
 ## 👨‍💻 Author
 
