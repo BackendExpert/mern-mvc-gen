@@ -80,6 +80,8 @@ npm install merngen
 
 <img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup3.PNG'>
 
+- According to SignUp("User") mean "User" is Model Name
+
 ## 👨‍💻 Author
 
 Name: Jehan Weerasuriya
