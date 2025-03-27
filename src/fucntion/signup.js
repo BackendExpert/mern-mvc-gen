@@ -14,10 +14,12 @@ const signup = (modelname) => {
             const requiredFeilds = []
 
             for (const feild in modelSchema){
-                if(modelSchema[feild].option.unique){
+                const options = modelSchema[feild].options || {}
+                
+                if(options.unique){
                     uniqueFeilds.push(feild)
                 }
-                if(modelSchema[feild].option.isRequired){
+                if(options.isRequired){
                     requiredFeilds.push(feild)
                 }
             }

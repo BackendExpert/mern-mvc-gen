@@ -1,3 +1,4 @@
 const { uniqueIdentifier } = require('./src/fucntion/uniqueIdentifier')
+const { signup } = require('./src/fucntion/signup')
 
-module.exports = { uniqueIdentifier }
+module.exports = { uniqueIdentifier, signup }
