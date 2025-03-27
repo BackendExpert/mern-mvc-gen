@@ -11,22 +11,33 @@ const signin = (modelname) => {
                 return res.json({ Error: "The Model cannot find in Project"})
             }
 
-            const email = req.body.email
+            const { email, password } = req.body;
 
-            const checkemail = await Model.findOne({ email: email })
-
-            if(checkemail){
-                return res.json({ Error: "No User Found by Given Email"})
+            if (!email || !password) {
+                return res.status(400).json({ error: "Email and password are required" });
             }
 
-            const checlpass = await bcrypt.compare(req.body.password, checkemail.password)
-
-            if(!checlpass){
-                return res.json({ Error: "Password Not Match..."})
+            const user = await Model.findOne({ email });
+            if (!user) {
+                return res.status(404).json({ error: "No user found with the given email" });
             }
 
-            const token = jwt.sign({ id: checkemail._id, role:checkemail.role }, process.env.JWT_SECRET);
-            return res.json({ Status: "Success", Result: checkemail, Token: token })
+            const isPasswordValid = await bcrypt.compare(password, user.password);
+            if (!isPasswordValid) {
+                return res.json({ error: "Incorrect password" });
+            }
+
+            const token = jwt.sign(
+                { id: user._id, role: user.role },
+                process.env.JWT_SECRET,
+                { expiresIn: "1d" } 
+            );
+
+            return res.json({
+                status: "success",
+                user,
+                token,
+            });
 
         }
         catch(err){
