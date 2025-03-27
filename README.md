@@ -74,7 +74,11 @@ npm install merngen
 1. Normal SignUp
 
 <img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup1.PNG'>
+<img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup2.PNG'>
 
+2. Using This Npm Package
+
+<img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup3.PNG'>
 
 ## 👨‍💻 Author
 
