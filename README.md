@@ -65,7 +65,7 @@ npm install merngen
 - Initial release
 - Develop SignUp and Sigin Functions
 
-### 1.0.0 - 27 March 2025
+### 2.0.0 - 01 April 2025
 
 - 2nd release
 - Develop Auth and ImageUpload Middleware
@@ -97,7 +97,7 @@ npm install merngen
 
 3. Auth and ImageUpload Middelware
 
-
+<img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/imageuploadandauthmiddle.PNG'>
 
 ## 👨‍💻 Author
 
