@@ -1,6 +1,6 @@
 # MERN-MVC-GEN
 
-- A helper toolkit for fast MERN MVC development. Easily generate controllers and integrate authentication functions like signup and signin.
+- A helper toolkit for fast MERN MVC development. Easily generate controllers and integrate authentication functions like signup and signin and also auth and Image Upload Middlewares.
 
 ## 📦 Installation
 
@@ -35,6 +35,14 @@ npm install merngen
 - Check Password using `bcrypt`
 - build-in authentication using `jwt` (`jsonwebtokens`)
 
+### AuthMiddleware
+
+- Check the authentication before access the route
+- must provide a login token for this 
+
+### ImageUpload Middleware
+
+- helps to upload images in Project
 
 ## Indetails Functions
 
@@ -51,6 +59,14 @@ npm install merngen
 - Returns a JWT token with user ID and role if authentication is successful
 
 
+### AuthMiddleware
+
+- Must need login token to run this fucntion
+
+### ImageUpload Middleware
+
+- image uploading (jpeg, png, gif) only accept
+
 ## 🔐 Security Practices
 
 - Passwords hashed using bcrypt
@@ -64,6 +80,19 @@ npm install merngen
 
 - Initial release
 - Develop SignUp and Sigin Functions
+
+### 2.0.0 - 01 April 2025
+
+- 2nd release
+- Develop Auth and ImageUpload Middleware
+
+
+## Common Limitations
+
+- ImageUpload Middleware (Following image extension only can upload with this middelware)
+- - jpeg
+- - png
+- - gif
 
 ## 🤝 Contributing
 
@@ -81,6 +110,10 @@ npm install merngen
 <img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup3.PNG'>
 
 - According to SignUp("User") mean "User" is Model Name
+
+3. Auth and ImageUpload Middelware
+
+<img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/imageuploadandauthmiddle.PNG'>
 
 ## 👨‍💻 Author
 
