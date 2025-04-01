@@ -65,6 +65,19 @@ npm install merngen
 - Initial release
 - Develop SignUp and Sigin Functions
 
+### 1.0.0 - 27 March 2025
+
+- 2nd release
+- Develop Auth and ImageUpload Middleware
+
+
+## Common Limitations
+
+- ImageUpload Middleware (Following image extension only can upload with this middelware)
+- - jpeg
+- - png
+- - gif
+
 ## 🤝 Contributing
 
 - Contributions are welcome! Please feel free to open issues or submit pull requests to improve this package.
@@ -81,6 +94,10 @@ npm install merngen
 <img src='https://github.com/BackendExpert/mern-mvc-gen/blob/master/imgs/signup3.PNG'>
 
 - According to SignUp("User") mean "User" is Model Name
+
+3. Auth and ImageUpload Middelware
+
+
 
 ## 👨‍💻 Author
 
