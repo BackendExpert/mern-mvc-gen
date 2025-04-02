@@ -4,7 +4,7 @@ const accessMiddleware = (roles = []) => {
             return res.status(401).json({ message: 'Unauthorized access.' });
         }
         
-        if (roles.includes(req.user.role) || req.user.isRepoCreator) {
+        if (roles.includes(req.user.role)) {
             return next();
         }
         
