@@ -8,7 +8,7 @@
 
 ```bash
 
-npm install merngen
+npm install mern-mvc-gen
 
 ```
 
